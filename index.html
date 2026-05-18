@@ -194,5 +194,19 @@ response updates while producing clear and detailed technical reports.</li>
         <p>&copy; 2026 Joseph Funderburk</p>
     </footer>
 
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            fetch('/api/GetCounter')
+                .then(response => response.text())
+                .then(count => {
+                    document.getElementById('count').textContent = count;
+                })
+                .catch(error => {
+                    document.getElementById('count').textContent = 'unavailable';
+                    console.error('Counter error:', error);
+                });
+        });
+    </script>
+
 </body>
 </html>
