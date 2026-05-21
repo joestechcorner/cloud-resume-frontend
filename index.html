@@ -13,6 +13,17 @@
             color: #333;
         }
 
+        /* === CHANGED: welcome banner styling (moved OUT of HTML, into CSS) === */
+        #welcome-banner {
+            text-align: center;
+            font-family: Georgia, serif;
+            font-size: 1.2em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        /* === END CHANGE === */
+
         h1 {
             color: #2c3e50;
             text-align: center;
@@ -81,15 +92,6 @@
             border: 1px solid #ddd;
         }
 
-        #counter {
-            text-align: center;
-            margin-top: 30px;
-            padding: 10px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            color: #666;
-        }
-
         footer {
             text-align: center;
             margin-top: 20px;
@@ -100,10 +102,16 @@
 </head>
 <body>
 
+    <!-- === CHANGED: welcome banner now correctly placed at top of body === -->
+    <div id="welcome-banner">
+        Welcome! You are visitor #<span id="count">...</span> since site launch
+    </div>
+    <!-- === END CHANGE === -->
+
     <h1>Joseph Ellis Funderburk</h1>
     <p class="contact">
         North Carolina | <a href="mailto:josephfunderburk21@protonmail.com">josephfunderburk21@protonmail.com</a> | 336 858 7294<br>
-        <a href="https://www.linkedin.com/in/josephfunderburk"/>LinkedIn</a> | <a href=https://github.com/joestechcorner>GitHub</a>
+        <a href="https://www.linkedin.com/in/josephfunderburk">LinkedIn</a> | <a href="https://github.com/joestechcorner">GitHub</a>
     </p>
 
     <h2>Summary</h2>
@@ -120,7 +128,7 @@
             <li>Triaged 70+ daily endpoint and cloud alerts across 14+ diverse customer environments, maintaining an average MTTR of 30 minutes for high-priority incidents.</li>
             <li>Identified potential security incidents and threats, determined scope of compromise, performed threat hunting, and provided containment and remediation recommendations for clients.</li>
             <li>Evaluated and reverse engineer malware through static and dynamic analysis to determine threat level and provide actionable intelligence for incident response</li>
-            <li>Escalated detailed incident reports within the ServiceNow ticketing system, ensuring a seamless handoff for Tier 2 & 3, providing tuning recommendations based on findings.</li>
+            <li>Escalated detailed incident reports within the ServiceNow ticketing system, ensuring a seamless handoff for Tier 2 &amp; 3, providing tuning recommendations based on findings.</li>
             <li>Communicated critical security findings to client stakeholders, translating complex technical data into clear,actionable remediation steps.</li>
         </ul>
     </div>
@@ -129,7 +137,7 @@
         <h3>LastPass <span class="date">May 2024 - Feb 2026</span></h3>
         <p class="job-title">Security Engineer</p>
         <ul>
-            <li>Monitored SIEM and EDR alerts to perform threat response using Defender XDR, Sentinel & Wiz maintaining a 99%
+            <li>Monitored SIEM and EDR alerts to perform threat response using Defender XDR, Sentinel &amp; Wiz maintaining a 99%
 SLA compliance rate relating to Email, Cloud, and Endpoint Security alerts.</li>
             <li>Supported the implementation of Azure Conditional Access policies, IAM hardening, and Zero Trust frameworks and
 vet AI-assisted tools for the organization</li>
@@ -138,7 +146,7 @@ cloud security posture by 15%.</li>
             <li>Prevented potential intrusions by initiating swift containment actions and coordinating with cross-functional teams
 to prevent critical company data loss during active incident response cycles.</li>
             <li>Managed end-to-end vulnerability remediation using Qualys, achieving a 35% reduction in attack surface.</li>
- 	<li>Coordinated with Detection Engineering to tune & improve KQL-based detections</li>
+ 	<li>Coordinated with Detection Engineering to tune &amp; improve KQL-based detections</li>
             <li>Documented and reported comprehensive post-incident reviews and translate complex technical risks in centralized
 case management systems for senior stakeholders; covering incident scope, investigative findings, remediation and
 response updates while producing clear and detailed technical reports.</li>
@@ -186,9 +194,7 @@ response updates while producing clear and detailed technical reports.</li>
         </ul>
     </div>
 
-    <div id="counter">
-        Visitors: <span id="count">Loading..?</span>
-    </div>
+    <!-- === CHANGED: old #counter block removed from here (it duplicated id="count") === -->
 
     <footer>
         <p>&copy; 2026 Joseph Funderburk</p>
